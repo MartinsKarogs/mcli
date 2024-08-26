@@ -13,7 +13,7 @@ def _retrieve_seed():
 			return f.read()
 	else:
 		with open(seed_file, 'w') as f:
-			seed = '150318576975388753416078783106283408870'
+			seed = random.getrandbits(128)
 			f.write(seed)
 			return seed
 
