@@ -1,0 +1,22 @@
+[project]
+name = "mcli"
+dynamic = ["version"]
+description = "Mārtiņš CLI, My personal Swiss army Knife"
+authors = [{ name = "Mārtiņš Karogs", email = "Martins.Karogs@proton.me" }]
+maintainers = [{ name = "Mārtiņš Karogs", email = "Martins.Karogs@proton.me" }]
+requires-python = ">=3.12"
+readme = "README.md"
+
+
+[tool.ruff]
+line-length = 180
+
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
+
+
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/mcli"
