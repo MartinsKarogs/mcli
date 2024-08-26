@@ -1,13 +1,21 @@
 #!/usr/bin/env python3
 
+import os
 import click
 import random
 from typing import Generator
 
 
 def _retrieve_seed():
-	# TODO: Implement secure seed generation and retrieval
-	return 'Temporary Seed'
+	seed_file = '/tmp/m_seed'
+	if os.path.isfile(seed_file):
+		with open(seed_file, 'r') as f:
+			return f.read()
+	else:
+		with open(seed_file, 'w') as f:
+			seed = '150318576975388753416078783106283408870'
+			f.write(seed)
+			return seed
 
 
 def _encrypt(message: str) -> Generator[str, None, None]:
