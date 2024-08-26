@@ -48,6 +48,7 @@ def _decrypt(message: str) -> Generator[str, None, None]:
 	Yields:
 		str: Decrypted message characters
 	"""
+	return ['Not Implemented']
 	raise NotImplementedError
 
 
